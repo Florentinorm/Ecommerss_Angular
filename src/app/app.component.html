@@ -1,0 +1,19 @@
+<mat-toolbar>
+    <a mat-button routerLink="/inicio"><img src="../assets/logo.png" style="width: 230px" /></a>
+    <a mat-button routerLink="/pedido">Realizar pedido</a>
+    <a mat-button routerLink="/mapa">Mapa</a>
+    <a mat-button routerLink="/carrito">Carrito</a>
+
+
+
+
+
+    <!--<span class="fas fa-search search-icon"></span>-->
+    <button routerLink="/carrito">
+      <fa-icon [icon]="faShoppingCart"></fa-icon>
+    <div style="font-size: 10px" class="badge bg-danger">{{totalItem}}</div>
+  </button>
+</mat-toolbar>
+<div class="">
+    <router-outlet></router-outlet>
+</div>

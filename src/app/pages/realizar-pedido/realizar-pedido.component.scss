@@ -1,0 +1,44 @@
+.card-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: white;
+    background-clip: border-box;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+
+.item img {
+    width: 130 px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.item {
+    margin: 0px 15px;
+    text-align: center;
+}
+
+// para darle color a las  letras de los restaurantes
+.item a:hover {
+    color: rgb(226, 6, 6);
+}
+
+.card {
+    padding: 20px;
+    margin: 30px;
+}
+
+.card img {
+    width: 250px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3 ease-in-out;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}

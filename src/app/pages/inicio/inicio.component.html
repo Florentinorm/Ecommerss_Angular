@@ -1,0 +1,43 @@
+<body >
+<!-- Jumbotron -->
+<div class="jumbotron p-10p wrap-img">
+<div class="wrap-content">
+    <!-- Card image -->
+    <div class="view overlay rounded-top waves-light" mdbWavesEffect>
+      
+      <a >
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+  
+    <!-- Card content -->
+    <div class="card-body  text-center mb-3">
+  
+      <!-- Title -->
+      <h1 class="card-title h3 my-4"><strong>¿TIENES HAMBRE?</strong></h1>
+      <br>
+      <h2 class="card-title h3 my-4"><strong>DEL CIELO A TU PLATO</strong></h2>
+      <!-- Text -->
+      <p class="card-text py-2">PIDE TU COMIDA Y ALGUNO DE NUESTROS DRONES LA LLEVARÁ HASTA LA PUERTA DE TU CASA</p>    
+  
+    </div>
+</div>
+ 
+</div>
+<!-- Jumbotron -->
+<div class="tr-container">
+<div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+    <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+       <div class="col mt-5" *ngFor="let item of productos">
+            <div class="card h-100 shadow-sm"> <img [src]="item.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">{{item.nombre}}</span> <span class="float-end price-hp">${{item.price}}</span> </div>
+                    <h5 class="card-title">{{item.bio}}</h5>
+                    <div class="text-center my-4"> <a (click)=addtoCart(item) class="btn btn-warning"><fa-icon [icon]="faCartPlus"></fa-icon></a> </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+</div>
+</body>

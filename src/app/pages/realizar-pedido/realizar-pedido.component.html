@@ -1,0 +1,49 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img src="../../../assets/img/elmexicano.jpg" alt="" />
+                <h5>Restaurant El Méxicano</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="../../../assets/img/panchito.jpeg" alt="" />
+                <h5>Restaurant El panchito</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="../../../assets/img/rosamexi.jpeg" alt="" />
+                <h5>Restaurant Rosa Méxicano</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="../../../assets/img/tejita.jpg" alt="" />
+                <h5>Restaurant La Tejita</h5>
+            </a>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productos">
+            <div class="card col-md-3">
+                <img [src]="item.img" [alt]="item.nombre" />
+                <h2 style="white-space: nowrap; overflow: ellipsis; max-width: 100ch;"><b>{{item.nombre}}</b></h2>
+                <p class="card-text">{{item.bio}}</p>
+                <p class="card-text"><strong>Precio:</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtoCart(item)>Agregar al carrito</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
